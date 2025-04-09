@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon bilan d'apprentissage – Une page générée par IA</title>
+    <link rel="stylesheet" href="bilan.css">
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Favicon (placeholder) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+</head>
+<body>
+    <!-- Bannière IA -->
+    <div class="ia-banner">
+        <p>Cette page, de son code à son contenu, a été entièrement générée par intelligence artificielle. Une démonstration concrète de la puissance du prompting et de son application dans le développement web.</p>
+        <button class="close-banner">×</button>
+    </div>
+
+    <!-- Toggle dark mode -->
+    <div class="theme-toggle">
+        <button id="theme-switch">
+            <span class="light-icon">☀️</span>
+            <span class="dark-icon">🌙</span>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1 class="title">Mon bilan d'apprentissage</h1>
+            <h2 class="subtitle">Une page générée par IA</h2>
+        </div>
+    </header>
+
+    <!-- Introduction -->
+    <section id="introduction" class="section">
+        <div class="container">
+            <h2>Introduction</h2>
+            <div class="card">
+                <p id="typing-text">Bienvenue sur cette page unique où technologie et créativité se rencontrent. Ce que vous voyez ici est le fruit d'une collaboration entre intelligence humaine et artificielle – un témoignage de ce que le prompting peut accomplir.</p>
+                <p>Cette page a été entièrement générée par une IA à partir d'un prompt détaillé que j'ai conçu. Elle illustre non seulement mes compétences acquises dans le domaine de l'IA, mais aussi comment cette technologie peut être exploitée pour créer des expériences web complètes et interactives.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences" class="section">
+        <div class="container">
+            <h2>Compétences acquises</h2>
+            <div class="competences-grid">
+                <!-- Catégorie 1 -->
+                <div class="competence-category fade-in">
+                    <h3>Compétences techniques</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item" data-level="90">
+                            <span class="skill-name">Prompting avancé</span>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </li>
+                        <li class="skill-item" data-level="85">
+                            <span class="skill-name">Développement Web</span>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </li>
+                        <li class="skill-item" data-level="75">
+                            <span class="skill-name">Intégration API IA</span>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </li>
+                        <li class="skill-item" data-level="80">
+                            <span class="skill-name">Optimisation SEO</span>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Catégorie 2 -->
+                <div class="competence-category fade-in">
+                    <h3>Compétences analytiques</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item" data-level="90">
+                            <span class="skill-name">Analyse de données</span>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </li>
+                        <li class="skill-item" data-level="85">
+                            <span class="skill-name">Résolution de problèmes</span>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </li>
+                        <li class="skill-item" data-level="80">
+                            <span class="skill-name">Pensée critique</span>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </li>
+                        <li class="skill-item" data-level="75">
+                            <span class="skill-name">Visualisation de données</span>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Catégorie 3 -->
+                <div class="competence-category fade-in">
+                    <h3>Compétences créatives</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item" data-level="95">
+                            <span class="skill-name">Rédaction de prompts</span>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </li>
+                        <li class="skill-item" data-level="85">
+                            <span class="skill-name">Design UX/UI</span>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </li>
+                        <li class="skill-item" data-level="80">
+                            <span class="skill-name">Storytelling</span>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </li>
+                        <li class="skill-item" data-level="75">
+                            <span class="skill-name">Génération de contenu</span>
+                            <div class="skill-bar"><span class="skill-progress"></span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mes meilleurs prompts -->
+    <section id="prompts" class="section">
+        <div class="container">
+            <h2>Mes meilleurs prompts</h2>
+            <p class="section-intro">Découvrez certains des prompts que j'ai utilisés et comment ils ont contribué à développer mes compétences.</p>
+            
+            <div class="accordion">
+                <!-- Prompt 1 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Prompt pour la génération de page web interactive</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="prompt-card">
+                            <h4>Le prompt</h4>
+                            <div class="prompt-text">
+                                <p>"Crée un site web complet avec HTML, CSS et JavaScript natif pour présenter un bilan de compétences interactif avec animations et mode sombre..."</p>
+                            </div>
+                            <h4>Pourquoi ce prompt est efficace</h4>
+                            <ul>
+                                <li>Il définit clairement les technologies à utiliser (HTML, CSS, JS natif)</li>
+                                <li>Il spécifie les fonctionnalités attendues (animations, mode sombre)</li>
+                                <li>Il établit un objectif clair (présenter un bilan de compétences)</li>
+                                <li>Il laisse suffisamment de liberté créative à l'IA</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Prompt 2 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Prompt pour l'analyse de données</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="prompt-card">
+                            <h4>Le prompt</h4>
+                            <div class="prompt-text">
+                                <p>"Analyse ces données d'utilisateurs et génère un script Python qui visualise les tendances principales. Utilise matplotlib pour créer des graphiques clairs avec légendes. Commente ton code pour expliquer chaque étape."</p>
+                            </div>
+                            <h4>Pourquoi ce prompt est efficace</h4>
+                            <ul>
+                                <li>Il combine une tâche d'analyse avec une tâche de programmation</li>
+                                <li>Il spécifie la bibliothèque à utiliser (matplotlib)</li>
+                                <li>Il demande des explications (commentaires dans le code)</li>
+                                <li>Il définit le format du résultat attendu (graphiques avec légendes)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Prompt 3 -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Prompt pour améliorer du contenu existant</h3>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="prompt-card">
+                            <h4>Le prompt</h4>
+                            <div class="prompt-text">
+                                <p>"Voici le texte de présentation de mon portfolio. Améliore-le en utilisant un ton professionnel mais chaleureux. Ajoute des mots-clés pertinents pour le SEO. Structure le texte avec des sous-titres et des puces pour une meilleure lisibilité."</p>
+                            </div>
+                            <h4>Pourquoi ce prompt est efficace</h4>
+                            <ul>
+                                <li>Il fournit un point de départ (le texte existant)</li>
+                                <li>Il définit un ton spécifique (professionnel mais chaleureux)</li>
+                                <li>Il demande des améliorations concrètes (SEO, structure)</li>
+                                <li>Il se concentre sur un objectif précis (meilleure lisibilité)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="section">
+        <div class="container">
+            <h2>Ma progression</h2>
+            <p class="section-intro">Suivez mon parcours d'apprentissage et les étapes clés de mon développement dans le domaine de l'IA.</p>
+            
+            <div class="timeline">
+                <!-- Étape 1 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">Janvier 2024</h3>
+                        <h4>Découverte des IA génératives</h4>
+                        <p>Premier contact avec les outils d'IA générative et exploration des possibilités offertes par cette technologie.</p>
+                    </div>
+                </div>
+                
+                <!-- Étape 2 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">Mars 2024</h3>
+                        <h4>Apprentissage du prompting</h4>
+                        <p>Approfondissement des techniques de prompting et compréhension des principes fondamentaux pour obtenir des résultats optimaux.</p>
+                    </div>
+                </div>
+                
+                <!-- Étape 3 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">Mai 2024</h3>
+                        <h4>Première intégration web</h4>
+                        <p>Intégration d'outils d'IA dans des projets web et exploration des API pour créer des applications interactives.</p>
+                    </div>
+                </div>
+                
+                <!-- Étape 4 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">Août 2024</h3>
+                        <h4>Projets concrets</h4>
+                        <p>Réalisation de projets complets utilisant l'IA comme outil de développement et de création de contenu.</p>
+                    </div>
+                </div>
+                
+                <!-- Étape 5 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">Octobre 2024</h3>
+                        <h4>Perfectionnement</h4>
+                        <p>Perfectionnement des techniques avancées et exploration de cas d'usage innovants pour l'IA dans le développement web.</p>
+                    </div>
+                </div>
+                
+                <!-- Étape 6 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-date">Mars 2025</h3>
+                        <h4>Aujourd'hui</h4>
+                        <p>Création de cette page démontrant l'étendue des compétences acquises et les possibilités offertes par l'IA générative.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section id="conclusion" class="section">
+        <div class="container">
+            <h2>Perspectives d'avenir</h2>
+            <div class="card">
+                <p>Maintenant que j'ai développé ces compétences en IA et en prompting, je souhaite les exploiter pour révolutionner ma façon de travailler et de créer. Voici comment j'envisage d'utiliser ces compétences à l'avenir :</p>
+                <div class="perspective-grid">
+                    <div class="perspective-item">
+                        <h3>Automatisation</h3>
+                        <p>Créer des workflows automatisés qui utilisent l'IA pour accélérer mes processus de développement et de création de contenu.</p>
+                    </div>
+                    <div class="perspective-item">
+                        <h3>Innovation</h3>
+                        <p>Développer des solutions innovantes combinant expertise humaine et intelligence artificielle pour résoudre des problèmes complexes.</p>
+                    </div>
+                    <div class="perspective-item">
+                        <h3>Formation</h3>
+                        <p>Partager mes connaissances et former d'autres personnes à l'utilisation efficace des outils d'IA dans leur travail quotidien.</p>
+                    </div>
+                </div>
+                <p class="final-thought">Cette page n'est qu'un début – une démonstration de ce qui est possible. L'avenir appartient à ceux qui savent collaborer efficacement avec l'IA, et je suis déterminé à faire partie de cette révolution.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Contact</h3>
+                    <p>email@example.com</p>
+                    <p>+33 6 12 34 56 78</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens</h3>
+                    <a href="#" class="btn-link">Mon portfolio complet</a>
+                    <a href="#" class="btn-link">LinkedIn</a>
+                    <a href="#" class="btn-link">GitHub</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 - Démonstration de la puissance du prompting</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="bilan.js"></script>
+</body>
+</html>

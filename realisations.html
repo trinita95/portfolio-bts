@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réalisations - Portfolio BTS SIO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="realisations.css">
+    <link rel="stylesheet" href="realisations.js">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="entreprise.html">Entreprise</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="veille.html">Veille</a></li>
+                <li><a href="bilan.html">Bilan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Mes Réalisations</h1>
+            <p>Projets scolaires et professionnels développés durant ma formation BTS SIO</p>
+        </div>
+    </section>
+
+    <div class="filter-container">
+        <button class="filter-button active" data-filter="all">Tous les Projets</button>
+        <button class="filter-button" data-filter="school">Projets Scolaires</button>
+        <button class="filter-button" data-filter="pro">Projets Professionnels</button>
+    </div>
+
+    <section class="projects-grid" id="projectsGrid">
+        
+        <div class="project-card" data-type="school" data-id="1">
+            <div class="project-header">
+                <h3>Site de vente</h3>
+                <span class="project-tag tag-school">Projet Scolaire</span>
+            </div>
+            <div class="project-content">
+                <p>Site web de vente conçu en PHP avec une base de données MySQL</p>
+                <div class="project-details">
+                    <div class="project-tech">
+                        <strong>Technologies :</strong> PHP, MySQL, HTML, CSS
+                    </div>
+                    <div class="project-duration">
+                        <strong>Durée :</strong> 3 mois
+                    </div>
+                </div>
+            </div>
+            <div class="project-footer">
+                <button class="btn-details">Voir les détails</button>
+                <div class="project-links">
+                    <a href="#" class="github-link">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card" data-type="pro" data-id="2">
+            <div class="project-header">
+                <h3>Interface de gestion documentaire</h3>
+                <span class="project-tag tag-pro">Projet Professionnel</span>
+            </div>
+            <div class="project-content">
+                <p>Interface permettant aux employés d'accéder à leurs documents administratifs de manière sécurisée et intuitive.</p>
+                <div class="project-details">
+                    <div class="project-tech">
+                        <strong>Technologies :</strong> HTML, CSS, JavaScript, PHP
+                    </div>
+                    <div class="project-duration">
+                        <strong>Durée :</strong> 4 mois
+                    </div>
+                </div>
+            </div>
+            <div class="project-footer">
+                <button class="btn-details">Voir les détails</button>
+                <div class="project-links">
+                    <a href="#" class="demo-link">Démo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card" data-type="pro" data-id="3">
+            <div class="project-header">
+                <h3>Plateforme de sondage</h3>
+                <span class="project-tag tag-pro">Projet Professionnel</span>
+            </div>
+            <div class="project-content">
+                <p>Développement d'une plateforme de sondage dans le cadre du développement des outils de l'entreprise.</p>
+                <div class="project-details">
+                    <div class="project-tech">
+                        <strong>Technologies :</strong> HTML, CSS, JavaScript, Node.js
+                    </div>
+                    <div class="project-duration">
+                        <strong>Durée :</strong> 2 mois
+                    </div>
+                </div>
+            </div>
+            <div class="project-footer">
+                <button class="btn-details">Voir les détails</button>
+                <div class="project-links">
+                    <a href="#" class="github-link">GitHub</a>
+                    <a href="#" class="demo-link">Démo</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-card" data-type="school" data-id="4">
+            <div class="project-header">
+                <h3>Application de gestion des stocks</h3>
+                <span class="project-tag tag-school">Projet Scolaire</span>
+            </div>
+            <div class="project-content">
+                <p>Application permettant de gérer les stocks d'une entreprise fictive, avec système de facturation.</p>
+                <div class="project-details">
+                    <div class="project-tech">
+                        <strong>Technologies :</strong> Java, MySQL
+                    </div>
+                    <div class="project-duration">
+                        <strong>Durée :</strong> 2 mois
+                    </div>
+                </div>
+            </div>
+            <div class="project-footer">
+                <button class="btn-details">Voir les détails</button>
+                <div class="project-links">
+                    <a href="#" class="github-link">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal pour les détails du projet -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <span id="modalTag" class="project-tag"></span>
+            </div>
+            <div class="modal-body">
+                <p id="modalDescription"></p>
+                <div class="modal-details">
+                    <div>
+                        <strong>Technologies :</strong> <span id="modalTech"></span>
+                    </div>
+                    <div>
+                        <strong>Durée :</strong> <span id="modalDuration"></span>
+                    </div>
+                </div>
+                <div class="modal-competences">
+                    <h3>Compétences acquises</h3>
+                    <ul id="modalCompetences"></ul>
+                </div>
+                <div class="modal-documents">
+                    <h3>Documents associés</h3>
+                    <ul id="modalDocuments"></ul>
+                </div>
+                <div class="modal-gallery">
+                    <h3>Captures d'écran</h3>
+                    <div id="modalGallery" class="gallery-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Coban Sinan - Tous droits réservés</p>
+    </footer>
+
+    <script src="realisations.js"></script>
+</body>
+</html>

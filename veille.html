@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Informatique - Portfolio BTS SIO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="veille.css">
+    <link rel="stylesheet" href="veille.js">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="entreprise.html">Entreprise</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="veille.html">Veille</a></li>
+                <li><a href="bilan.html">Bilan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Veille Technologique</h1>
+            <p>Technologies dans l'automobile : suivez l'évolution du secteur</p>
+        </div>
+    </section>
+
+    <div class="filter-container">
+        <div class="filter-group">
+            <span class="filter-label">Tri par note :</span>
+            <button class="filter-button" data-filter="rating" data-order="desc">Meilleures notes</button>
+            <button class="filter-button" data-filter="rating" data-order="asc">Moins bonnes notes</button>
+        </div>
+        <div class="filter-group">
+            <span class="filter-label">Tri par date :</span>
+            <button class="filter-button active" data-filter="date" data-order="desc">Plus récentes</button>
+            <button class="filter-button" data-filter="date" data-order="asc">Plus anciennes</button>
+        </div>
+    </div>
+
+    <section class="articles-grid" id="articlesGrid">
+        
+        <div class="article-card" data-rating="4.5" data-date="2024-03-15">
+            <div class="article-header">
+                <h3>Les systèmes ADAS dernière génération</h3>
+                <div class="article-meta">
+                    <div class="article-date">15 mars 2024</div>
+                    <div class="article-rating">
+                        <span class="stars">★★★★<span class="half-star">★</span></span>
+                        <span class="rating-value">4.5/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="article-content">
+                <p>Les systèmes avancés d'aide à la conduite (ADAS) continuent d'évoluer pour améliorer la sécurité routière...</p>
+                <div class="article-tags">
+                    <span class="article-tag">ADAS</span>
+                    <span class="article-tag">Sécurité</span>
+                    <span class="article-tag">IA</span>
+                </div>
+            </div>
+            <div class="article-footer">
+                <button class="btn-details">Lire l'article</button>
+            </div>
+        </div>
+
+        <div class="article-card" data-rating="5" data-date="2024-02-28">
+            <div class="article-header">
+                <h3>Les véhicules électriques et l'autonomie</h3>
+                <div class="article-meta">
+                    <div class="article-date">28 février 2024</div>
+                    <div class="article-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-value">5/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="article-content">
+                <p>Révolution technologique dans les batteries des véhicules électriques : comment l'autonomie a doublé en 5 ans...</p>
+                <div class="article-tags">
+                    <span class="article-tag">Électrique</span>
+                    <span class="article-tag">Batteries</span>
+                    <span class="article-tag">Autonomie</span>
+                </div>
+            </div>
+            <div class="article-footer">
+                <button class="btn-details">Lire l'article</button>
+            </div>
+        </div>
+
+        <div class="article-card" data-rating="3.5" data-date="2024-01-20">
+            <div class="article-header">
+                <h3>CES 2024 : les innovations automobiles</h3>
+                <div class="article-meta">
+                    <div class="article-date">20 janvier 2024</div>
+                    <div class="article-rating">
+                        <span class="stars">★★★<span class="half-star">★</span></span>
+                        <span class="rating-value">3.5/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="article-content">
+                <p>Le Consumer Electronics Show 2024 a dévoilé plusieurs innovations majeures pour l'industrie automobile...</p>
+                <div class="article-tags">
+                    <span class="article-tag">CES</span>
+                    <span class="article-tag">Innovation</span>
+                    <span class="article-tag">Futur</span>
+                </div>
+            </div>
+            <div class="article-footer">
+                <button class="btn-details">Lire l'article</button>
+            </div>
+        </div>
+        
+        <div class="article-card" data-rating="4" data-date="2023-12-10">
+            <div class="article-header">
+                <h3>L'intelligence artificielle dans les tableaux de bord</h3>
+                <div class="article-meta">
+                    <div class="article-date">10 décembre 2023</div>
+                    <div class="article-rating">
+                        <span class="stars">★★★★</span>
+                        <span class="rating-value">4/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="article-content">
+                <p>Comment l'IA transforme l'expérience utilisateur des tableaux de bord et interfaces des véhicules modernes...</p>
+                <div class="article-tags">
+                    <span class="article-tag">IA</span>
+                    <span class="article-tag">Interface</span>
+                    <span class="article-tag">UX</span>
+                </div>
+            </div>
+            <div class="article-footer">
+                <button class="btn-details">Lire l'article</button>
+            </div>
+        </div>
+
+        <div class="article-card" data-rating="4.5" data-date="2023-11-05">
+            <div class="article-header">
+                <h3>Cybersécurité automobile : les défis</h3>
+                <div class="article-meta">
+                    <div class="article-date">5 novembre 2023</div>
+                    <div class="article-rating">
+                        <span class="stars">★★★★<span class="half-star">★</span></span>
+                        <span class="rating-value">4.5/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="article-content">
+                <p>Les véhicules connectés sont de plus en plus vulnérables aux cyberattaques. Quelles sont les solutions...</p>
+                <div class="article-tags">
+                    <span class="article-tag">Cybersécurité</span>
+                    <span class="article-tag">Sécurité</span>
+                    <span class="article-tag">Connectivité</span>
+                </div>
+            </div>
+            <div class="article-footer">
+                <button class="btn-details">Lire l'article</button>
+            </div>
+        </div>
+
+        <div class="article-card" data-rating="3" data-date="2023-10-18">
+            <div class="article-header">
+                <h3>5G et automobile : quel impact sur la mobilité?</h3>
+                <div class="article-meta">
+                    <div class="article-date">18 octobre 2023</div>
+                    <div class="article-rating">
+                        <span class="stars">★★★</span>
+                        <span class="rating-value">3/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="article-content">
+                <p>La 5G promet de révolutionner les communications entre véhicules et infrastructures. État des lieux...</p>
+                <div class="article-tags">
+                    <span class="article-tag">5G</span>
+                    <span class="article-tag">V2X</span>
+                    <span class="article-tag">Connectivité</span>
+                </div>
+            </div>
+            <div class="article-footer">
+                <button class="btn-details">Lire l'article</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal pour les détails de l'article -->
+    <div id="articleModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <div class="modal-meta">
+                    <div class="modal-date" id="modalDate"></div>
+                    <div class="modal-rating" id="modalRating"></div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div id="modalContent"></div>
+                <div class="modal-tags" id="modalTags"></div>
+                <div class="modal-sources">
+                    <h3>Sources</h3>
+                    <ul id="modalSources"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Coban Sinan - Tous droits réservés</p>
+    </footer>
+
+    <script src="veille.js"></script>
+</body>
+</html>
