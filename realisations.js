@@ -118,6 +118,56 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         4: {
+            title: "Interface de gestion documentaire",
+            type: "pro",
+            tag: "Projet Professionnel",
+            description: "Application web permettant aux employés d'accéder à leurs documents administratifs (fiches de paie, congés, etc.) de manière sécurisée. L'interface offre également un système de notification pour les nouveaux documents disponibles.",
+            tech: "HTML, CSS, JavaScript, PHP, MySQL",
+            duration: "4 mois",
+            folderPath: "projets/interface-gestion/",
+            competences: [
+                "Développement d'une interface utilisateur intuitive",
+                "Mise en place d'un système d'authentification sécurisé",
+                "Gestion des droits d'accès par type d'utilisateur",
+                "Optimisation des performances pour le chargement des documents"
+            ],
+            documents: [
+                { name: "Spécifications fonctionnelles", filename: "specifications.pdf" },
+                { name: "Manuel utilisateur", filename: "manuel_utilisateur.pdf" },
+                { name: "Présentation client", filename: "presentation.pdf" }
+            ],
+            gallery: [
+                { filename: "dashboard.jpg", alt: "Tableau de bord" },
+                { filename: "documents.jpg", alt: "Liste des documents" },
+                { filename: "profil.jpg", alt: "Page de profil" }
+            ]
+        },
+        5: {
+            title: "Interface de gestion documentaire",
+            type: "pro",
+            tag: "Projet Professionnel",
+            description: "Application web permettant aux employés d'accéder à leurs documents administratifs (fiches de paie, congés, etc.) de manière sécurisée. L'interface offre également un système de notification pour les nouveaux documents disponibles.",
+            tech: "HTML, CSS, JavaScript, PHP, MySQL",
+            duration: "4 mois",
+            folderPath: "projets/interface-gestion/",
+            competences: [
+                "Développement d'une interface utilisateur intuitive",
+                "Mise en place d'un système d'authentification sécurisé",
+                "Gestion des droits d'accès par type d'utilisateur",
+                "Optimisation des performances pour le chargement des documents"
+            ],
+            documents: [
+                { name: "Spécifications fonctionnelles", filename: "specifications.pdf" },
+                { name: "Manuel utilisateur", filename: "manuel_utilisateur.pdf" },
+                { name: "Présentation client", filename: "presentation.pdf" }
+            ],
+            gallery: [
+                { filename: "dashboard.jpg", alt: "Tableau de bord" },
+                { filename: "documents.jpg", alt: "Liste des documents" },
+                { filename: "profil.jpg", alt: "Page de profil" }
+            ]
+        },
+        6: {
             title: "Application de gestion des stocks",
             type: "school",
             tag: "Projet Scolaire",
@@ -143,7 +193,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 { filename: "produits.jpg", alt: "Gestion des produits" },
                 { filename: "factures.jpg", alt: "Système de facturation" }
             ]
-        }
+        },
+        7: {
+            title: "Interface de gestion documentaire",
+            type: "pro",
+            tag: "Projet Professionnel",
+            description: "Application web permettant aux employés d'accéder à leurs documents administratifs (fiches de paie, congés, etc.) de manière sécurisée. L'interface offre également un système de notification pour les nouveaux documents disponibles.",
+            tech: "HTML, CSS, JavaScript, PHP, MySQL",
+            duration: "4 mois",
+            folderPath: "projets/interface-gestion/",
+            competences: [
+                "Développement d'une interface utilisateur intuitive",
+                "Mise en place d'un système d'authentification sécurisé",
+                "Gestion des droits d'accès par type d'utilisateur",
+                "Optimisation des performances pour le chargement des documents"
+            ],
+            documents: [
+                { name: "Spécifications fonctionnelles", filename: "specifications.pdf" },
+                { name: "Manuel utilisateur", filename: "manuel_utilisateur.pdf" },
+                { name: "Présentation client", filename: "presentation.pdf" }
+            ],
+            gallery: [
+                { filename: "dashboard.jpg", alt: "Tableau de bord" },
+                { filename: "documents.jpg", alt: "Liste des documents" },
+                { filename: "profil.jpg", alt: "Page de profil" }
+            ]
+        },
     };
 
     // Fonction pour construire les chemins complets des fichiers
