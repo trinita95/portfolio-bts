@@ -43,15 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Gest EPI",
             type: "school",
             tag: "Projet Scolaire",
-            description: "Application de gestion des Équipements de Protection Individuelle (EPI) pour une entreprise. Le système permet de suivre l'attribution, les retours et les dates de péremption des équipements.",
-            tech: "C#, SQL Server, WPF",
+            description: "Application de gestion des Équipements de Protection Individuelle (EPI) . Le système permet de suivre l'attribution, les retours et les dates de péremption des équipements.",
+            tech: "React, Node JS",
             duration: "3 mois",
             folderPath: "projets/gest-epi/",
             competences: [
-                "Développement d'applications Windows",
-                "Programmation orientée objet en C#",
-                "Conception et implémentation d'une base de données relationnelle",
-                "Création d'interfaces utilisateur avec WPF"
+                "Développement d'une API centralisée pour la gestion des équipements de protection individuelle (EPI) et le suivi des contrôles de sécurité.",
+                "Fonctionnalités complètes de gestion des EPI : création, modification et suivi des équipements (cordes, casques, longes, baudriers, etc.).",
+                "Intégration d’un module de contrôle : enregistrement des vérifications effectuées, gestion des statuts de conformité des EPI (conforme, à réparer, hors service).",
+                
             ],
             documents: [
                 { name: "Contexte", filename: "contexte.pdf" },
@@ -60,25 +60,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: "Captures d'écran du code", filename: "captures_code.pdf" },
                 { name: "Aperçu du projet", filename: "apercu_projet.pdf" }
             ],
-            gallery: [
-                { filename: "accueil.jpg", alt: "Page d'accueil" },
-                { filename: "gestion.jpg", alt: "Gestion des EPI" },
-                { filename: "attribution.jpg", alt: "Attribution des EPI" }
-            ]
+            
+            
         },
         2: {
             title: "Jojo Legion",
             type: "school",
             tag: "Projet Scolaire",
-            description: "Développement d'un jeu vidéo 2D inspiré de l'univers de JoJo's Bizarre Adventure. Le joueur incarne un personnage qui doit affronter des ennemis en utilisant des pouvoirs spéciaux.",
-            tech: "Unity, C#, SQLite",
+            description: "Jeu d'aventure textuel développé en Python où le joueur progresse à travers une histoire interactive.",
+            tech: "Django",
             duration: "4 mois",
             folderPath: "projets/jojo-legion/",
             competences: [
-                "Développement de jeux vidéo avec Unity",
-                "Programmation C# pour les mécaniques de jeu",
-                "Conception de niveaux et d'interfaces utilisateur",
-                "Gestion de projet avec méthodologie agile"
+                "Consultation de tout les personnages disponibles et des théories",
+                "gestion differente des utilisateurs connectés et non connectés",
+                "Classement des personnages et des théories",
+                
             ],
             documents: [
                 { name: "README", filename: "readme.pdf" },
@@ -90,24 +87,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: "Aperçu du projet", filename: "apercu_projet.pdf" }
             ],
             gallery: [
-                { filename: "menu.jpg", alt: "Menu principal" },
-                { filename: "combat.jpg", alt: "Scène de combat" },
-                { filename: "personnage.jpg", alt: "Sélection de personnage" }
+                { filename: "screen terminal", alt: "Menu principal" },
+                
             ]
         },
         3: {
             title: "Site de vente",
             type: "school",
             tag: "Projet Scolaire",
-            description: "Site web de vente en ligne complet avec système de panier, gestion des utilisateurs et interface d'administration. Ce projet a été réalisé dans le cadre de ma formation BTS SIO pour mettre en pratique les connaissances en développement web backend.",
-            tech: "PHP, MySQL, HTML, CSS, JavaScript",
+            description: "Site web de vente en ligne complet avec système de panier",
             duration: "3 mois",
             folderPath: "projets/site-vente/",
             competences: [
                 "Développement d'une architecture MVC",
                 "Gestion des sessions utilisateurs",
                 "Conception et implémentation d'une base de données",
-                "Sécurisation des données (prévention des injections SQL)"
             ],
             documents: [
                 { name: "Extrait de code", filename: "extrait_code_sdv.pdf" },
@@ -117,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
             gallery: [
                 { filename: "accueil.jpg", alt: "Page d'accueil" },
                 { filename: "panier.jpg", alt: "Panier" },
-                { filename: "admin.jpg", alt: "Interface d'administration" }
             ]
         },
         4: {
@@ -125,8 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
             type: "school",
             tag: "Projet Scolaire",
             description: "Jeu d'aventure textuel développé en Python où le joueur progresse à travers une histoire interactive en faisant des choix qui influencent le déroulement de l'aventure et les fins possibles.",
-            tech: "Python, SQLite",
-            duration: "2 mois",
+            tech: "Python",
+            duration: "1 semaine",
             folderPath: "projets/text-adventure/",
             competences: [
                 "Programmation Python",
