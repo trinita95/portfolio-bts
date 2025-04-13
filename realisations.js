@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             competences: [
                 "Développement d'une API centralisée pour la gestion des équipements de protection individuelle (EPI) et le suivi des contrôles de sécurité.",
                 "Fonctionnalités complètes de gestion des EPI : création, modification et suivi des équipements (cordes, casques, longes, baudriers, etc.).",
-                "Intégration d’un module de contrôle : enregistrement des vérifications effectuées, gestion des statuts de conformité des EPI (conforme, à réparer, hors service).",
+                "Intégration d'un module de contrôle : enregistrement des vérifications effectuées, gestion des statuts de conformité des EPI (conforme, à réparer, hors service).",
                 
             ],
             documents: [
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Optimisation du logiciel interne de l'entreprise ",
             type: "pro",
             tag: "Projet Professionnel",
-            description: "Optimisation des performances et de l’ergonomie d’un logiciel interne pour améliorer l’efficacité des utilisateurs.",
+            description: "Optimisation des performances et de l'ergonomie d'un logiciel interne pour améliorer l'efficacité des utilisateurs.",
             tech: "Django",
             duration: "1 mois",
             folderPath: "projets/interface-gestion/",
@@ -175,8 +175,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Mettre à disposition des utilisateurs un service informatique",
             ],
             documents: [
-                { name: "Cahier des charges", filename: "document/cdc_sondages.pdf" },
-                { name: "Planning", filename: "document/planning_sondage.png" }
+                { name: "Cahier des charges", filename: "cdc_sondages.pdf" },
+                { name: "Planning", filename: "planning_sondage.png" }
             ],
             gallery: [
                 { filename: "1", alt: "documents/cdc_sondages" },
@@ -194,13 +194,13 @@ document.addEventListener('DOMContentLoaded', () => {
             folderPath: "projets/monitoring-reseau/",
             competences: [
                 "Gérer le patrimoine informatique",
-                "Répondre aux incidents et aux demandes d’assistance et d’évolution",
+                "Répondre aux incidents et aux demandes d'assistance et d'évolution",
                 "Travailler en mode projet",
             ],
             documents: [
-                { name: "Cahier des charges", filename: "document/cdc_ref.pdf" },
-                { name: "Charte graphique de l'entreprise", filename: "document/charte_graphique_flex.pdf" },
-                { name: "Planning", filename: "document/planning_ref.png" }
+                { name: "Cahier des charges", filename: "cdc_ref.pdf" },
+                { name: "Charte graphique de l'entreprise", filename: "charte_graphique_flex.pdf" },
+                { name: "Planning", filename: "planning_ref.png" }
             ],
             gallery: [
                 { filename: "1", alt: "1" },
@@ -218,17 +218,17 @@ document.addEventListener('DOMContentLoaded', () => {
             folderPath: "projets/app-rh/",
             competences: [
                 "Gérer le patrimoine informatique",
-                "Répondre aux incidents et aux demandes d’assistance et d’évolution",
+                "Répondre aux incidents et aux demandes d'assistance et d'évolution",
                 "Travailler en mode projet",
 
             ],
             documents: [
-                { name: "Cahier des charges", filename: "document/cdc_section_utilisateur.pdf" },
-                { name: "Planning", filename: "document/planning_section_u.png" }
+                { name: "Cahier des charges", filename: "cdc_section_utilisateur.pdf" },
+                { name: "Planning", filename: "planning_section_u.png" }
             ],
             gallery: [
-                { filename: "screen 1", alt: "Écran de connexion" },
-                { filename: "2", alt: "Gestion des congés" },
+                { filename: "screen 1", alt: "1" },
+                { filename: "2", alt: "2" },
             
             ]
         },
@@ -255,9 +255,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Fonction pour construire les chemins complets des fichiers
+    // Fonction modifiée pour utiliser le dossier document à la racine
     function getDocumentPath(projectData, filename) {
-        return projectData.folderPath + "documents/" + filename;
+        return "document/" + filename;
     }
 
     function getImagePath(projectData, filename) {
@@ -290,54 +290,67 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Remplir les documents avec les chemins corrects
                 modalDocuments.innerHTML = '';
-                projectData.documents.forEach(doc => {
+                if (projectData.documents && projectData.documents.length > 0) {
+                    projectData.documents.forEach(doc => {
+                        const li = document.createElement('li');
+                        const a = document.createElement('a');
+                        a.href = getDocumentPath(projectData, doc.filename);
+                        a.textContent = doc.name;
+                        a.target = "_blank";
+                        li.appendChild(a);
+                        modalDocuments.appendChild(li);
+                    });
+                } else {
                     const li = document.createElement('li');
-                    const a = document.createElement('a');
-                    a.href = getDocumentPath(projectData, doc.filename);
-                    a.textContent = doc.name;
-                    a.target = "_blank";
-                    li.appendChild(a);
+                    li.textContent = "Aucun document disponible";
                     modalDocuments.appendChild(li);
-                });
+                }
                 
                 // Remplir la galerie avec les chemins corrects
                 modalGallery.innerHTML = '';
-                projectData.gallery.forEach(image => {
-                    const div = document.createElement('div');
-                    div.className = 'gallery-item';
-                    const img = document.createElement('img');
-                    img.src = getImagePath(projectData, image.filename);
-                    img.alt = image.alt;
-                    
-                    // Ajouter la fonctionnalité de zoom sur l'image au clic
-                    div.addEventListener('click', () => {
-                        const fullImg = document.createElement('div');
-                        fullImg.className = 'fullscreen-image';
-                        const imgElement = document.createElement('img');
-                        imgElement.src = img.src;
-                        fullImg.appendChild(imgElement);
+                if (projectData.gallery && projectData.gallery.length > 0) {
+                    projectData.gallery.forEach(image => {
+                        const div = document.createElement('div');
+                        div.className = 'gallery-item';
+                        const img = document.createElement('img');
+                        img.src = getImagePath(projectData, image.filename);
+                        img.alt = image.alt;
                         
-                        // Ajouter un bouton de fermeture
-                        const closeBtn = document.createElement('span');
-                        closeBtn.className = 'close-fullscreen';
-                        closeBtn.innerHTML = '&times;';
-                        closeBtn.addEventListener('click', (e) => {
-                            e.stopPropagation();
-                            document.body.removeChild(fullImg);
+                        // Ajouter la fonctionnalité de zoom sur l'image au clic
+                        div.addEventListener('click', () => {
+                            const fullImg = document.createElement('div');
+                            fullImg.className = 'fullscreen-image';
+                            const imgElement = document.createElement('img');
+                            imgElement.src = img.src;
+                            fullImg.appendChild(imgElement);
+                            
+                            // Ajouter un bouton de fermeture
+                            const closeBtn = document.createElement('span');
+                            closeBtn.className = 'close-fullscreen';
+                            closeBtn.innerHTML = '&times;';
+                            closeBtn.addEventListener('click', (e) => {
+                                e.stopPropagation();
+                                document.body.removeChild(fullImg);
+                            });
+                            fullImg.appendChild(closeBtn);
+                            
+                            // Fermer l'image plein écran en cliquant dessus
+                            fullImg.addEventListener('click', () => {
+                                document.body.removeChild(fullImg);
+                            });
+                            
+                            document.body.appendChild(fullImg);
                         });
-                        fullImg.appendChild(closeBtn);
                         
-                        // Fermer l'image plein écran en cliquant dessus
-                        fullImg.addEventListener('click', () => {
-                            document.body.removeChild(fullImg);
-                        });
-                        
-                        document.body.appendChild(fullImg);
+                        div.appendChild(img);
+                        modalGallery.appendChild(div);
                     });
-                    
-                    div.appendChild(img);
+                } else {
+                    const div = document.createElement('div');
+                    div.className = 'no-gallery';
+                    div.textContent = "Aucune image disponible";
                     modalGallery.appendChild(div);
-                });
+                }
                 
                 // Afficher le modal
                 modal.style.display = 'block';
@@ -369,11 +382,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-
-
-
-a.href = getDocumentPath(projectData, doc.filename);
-a.textContent = doc.name;
-a.download = ''; // Permet de télécharger le fichier
-a.target = "_blank"; // Ouvre dans un nouvel onglet
