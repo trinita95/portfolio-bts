@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Mission de sondage",
             type: "pro",
             tag: "Projet Professionnel",
-            description: ">Développement d'une interface de sondage dans le cadre du développement des outils de l'entreprise.",
+            description: "Développement d'une interface de sondage dans le cadre du développement des outils de l'entreprise.",
             tech: "HTML, CSS, JavaScript",
             duration: "3 mois",
             folderPath: "projets/plateforme-sondage/",
@@ -255,9 +255,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Fonction modifiée pour utiliser le dossier document à la racine
+    // Fonction pour construire les chemins complets des fichiers
     function getDocumentPath(projectData, filename) {
-        return "document/" + filename;
+        // On vérifie si le fichier est un PDF ou une image PNG
+        const fileExtension = filename.split('.').pop().toLowerCase();
+        
+        // Si c'est un PDF ou une image PNG qui correspond aux plannings, on le cherche dans le dossier document/ à la racine
+        if (fileExtension === 'pdf' || 
+            (fileExtension === 'png' && (
+                filename.includes('planning_ref') || 
+                filename.includes('planning_section_u') || 
+                filename.includes('planning_sondage')
+            ))) {
+            return "document/" + filename;
+        }
+        
+        // Sinon on utilise le chemin habituel dans le dossier du projet
+        return projectData.folderPath + "documents/" + filename;
     }
 
     function getImagePath(projectData, filename) {
@@ -277,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalTag.textContent = projectData.tag;
                 modalTag.className = `project-tag tag-${projectData.type}`;
                 modalDescription.textContent = projectData.description;
-                modalTech.textContent = projectData.tech;
+                modalTech.textContent = projectData.tech || 'Non spécifié';
                 modalDuration.textContent = projectData.duration;
                 
                 // Remplir les compétences
