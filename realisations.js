@@ -175,8 +175,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Mettre à disposition des utilisateurs un service informatique",
             ],
             documents: [
-                { name: "Cahier des charges", filename: "cdc_sondages.pdf" },
-                { name: "Planning", filename: "planning_sondage.png" }
+                { name: "Cahier des charges", filename: "cdc_sondages (3).pdf" },
+                { name: "Planning", filename: "planning sondage.png" }
             ],
             gallery: [
                 { filename: "1", alt: "documents/cdc_sondages" },
@@ -199,8 +199,8 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             documents: [
                 { name: "Cahier des charges", filename: "cdc_ref.pdf" },
-                { name: "Charte graphique de l'entreprise", filename: "charte_graphique_flex.pdf" },
-                { name: "Planning", filename: "planning_ref.png" }
+                { name: "Charte graphique de l'entreprise", filename: "chartegraphique flex-flux.pdf" },
+                { name: "Planning", filename: "planning ref.png" }
             ],
             gallery: [
                 { filename: "1", alt: "1" },
@@ -223,8 +223,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             ],
             documents: [
-                { name: "Cahier des charges", filename: "cdc_section_utilisateur.pdf" },
-                { name: "Planning", filename: "planning_section_u.png" }
+                { name: "Cahier des charges", filename: "cdc_section_utilisateur (1).pdf" },
+                { name: "Planning", filename: "planning section u.png" }
             ],
             gallery: [
                 { filename: "screen 1", alt: "1n" },
