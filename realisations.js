@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Jojo Legion",
             type: "school",
             tag: "Projet Scolaire",
-            description: "Jeu d'aventure textuel développé en Python où le joueur progresse à travers une histoire interactive.",
+            description: "Projet web réalisé autour de l’univers de JoJo’s Bizarre Adventure, pensé par les fans, pour les fans. Ce site propose des contenus variés : présentations des personnages, galeries, théories, etc.",
             tech: "Django",
             duration: "4 mois",
             folderPath: "projets/jojo-legion/",
@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             type: "school",
             tag: "Projet Scolaire",
             description: "Site web de vente en ligne complet avec système de panier",
+            tech: "PHP, MySQL, HTML, CSS, JavaScript",
             duration: "3 mois",
             folderPath: "projets/site-vente/",
             competences: [
@@ -117,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Text Adventure",
             type: "school",
             tag: "Projet Scolaire",
-            description: "Jeu d'aventure textuel développé en Python où le joueur progresse à travers une histoire interactive en faisant des choix qui influencent le déroulement de l'aventure et les fins possibles.",
+            description: "Jeu d'aventure textuel développé en Python où le joueur progresse à travers une histoire interactive.",
             tech: "Python",
             duration: "1 semaine",
             folderPath: "projets/text-adventure/",
@@ -135,8 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             gallery: [
                 { filename: "intro.jpg", alt: "Introduction du jeu" },
-                { filename: "choix.jpg", alt: "Exemple de choix" },
-                { filename: "fin.jpg", alt: "Une des fins possibles" }
+                { filename: "choix.jpg", alt: "Exemple de choix" }
             ]
         },
         5: {
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Mission de sondage",
             type: "pro",
             tag: "Projet Professionnel",
-            description: "Développement d'une interface de sondage dans le cadre du développement des outils de l'entreprise.",
+            description: ">Développement d'une interface de sondage dans le cadre du développement des outils de l'entreprise.",
             tech: "HTML, CSS, JavaScript",
             duration: "3 mois",
             folderPath: "projets/plateforme-sondage/",
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: "Planning", filename: "planning_section_u.png" }
             ],
             gallery: [
-                { filename: "screen 1", alt: "1" },
+                { filename: "screen 1", alt: "1n" },
                 { filename: "2", alt: "2" },
             
             ]
@@ -256,22 +256,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Fonction pour construire les chemins complets des fichiers
+    // Modifiée pour inclure le sous-dossier "document"
     function getDocumentPath(projectData, filename) {
-        // On vérifie si le fichier est un PDF ou une image PNG
-        const fileExtension = filename.split('.').pop().toLowerCase();
-        
-        // Si c'est un PDF ou une image PNG qui correspond aux plannings, on le cherche dans le dossier document/ à la racine
-        if (fileExtension === 'pdf' || 
-            (fileExtension === 'png' && (
-                filename.includes('planning_ref') || 
-                filename.includes('planning_section_u') || 
-                filename.includes('planning_sondage')
-            ))) {
-            return "document/" + filename;
-        }
-        
-        // Sinon on utilise le chemin habituel dans le dossier du projet
-        return projectData.folderPath + "documents/" + filename;
+        return projectData.folderPath + "document/" + filename;
     }
 
     function getImagePath(projectData, filename) {
@@ -291,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalTag.textContent = projectData.tag;
                 modalTag.className = `project-tag tag-${projectData.type}`;
                 modalDescription.textContent = projectData.description;
-                modalTech.textContent = projectData.tech || 'Non spécifié';
+                modalTech.textContent = projectData.tech;
                 modalDuration.textContent = projectData.duration;
                 
                 // Remplir les compétences
