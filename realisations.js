@@ -182,7 +182,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: "Charte graphique", filename: "charte graphique flex-flux.pdf" },
                 { name: "Planning", filename: "planning refonte.jpg" }
             ],
-            gallery: []
+            gallery: [
+                { filename: "ancien visuel appli.jpg", alt: "ancien visuel" },
+                { filename: "nouveau visu refonte", alt: "nouveau visuel" }
+            ]
         },
         8: {
             title: "Section utilisateur Application mobile",
