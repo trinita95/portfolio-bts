@@ -78,9 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 
             ],
             documents: [
-                { name: "README", filename: "readme.pdf" },
-                { name: "Charte graphique", filename: "charte_graphique.pdf" },
-                { name: "Cahier des charges", filename: "cahier_des_charges.pdf" },
+                { name: "README", filename: "README.md" },
+                { name: "Charte graphique", filename: "charte graphique Final.pdf" },
+                { name: "Cahier des charges", filename: "Cahier des charges (1).pdf" },
                 { name: "Diagrammes", filename: "diagrammes.pdf" },
                 { name: "Planning", filename: "planning.pdf" },
                 { name: "Extrait de code", filename: "extrait_code.pdf" },
