@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalGallery = document.getElementById('modalGallery');
     const closeModal = document.querySelector('.close-modal');
 
-    // Base de données des projets avec correspondance des documents
+    // Base de données des projets avec correspondance exacte des documents
     const projectsData = {
         1: {
             title: "Gest EPI",
@@ -53,11 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Intégration d'un module de contrôle : enregistrement des vérifications effectuées, gestion des statuts de conformité des EPI (conforme, à réparer, hors service).",
             ],
             documents: [
-                { name: "Contexte et cahier des charges", filename: "Cahier des Charges (1).pdf" },
+                { name: "Cahier des charges", filename: "Cahier des Charges (1).pdf" },
                 { name: "Modèle relationnel", filename: "modele realitionnel.md" }
             ],
             gallery: [
-                { filename: "ancien_visuel_appli.jpg", alt: "Visuel de l'application" }
+                { filename: "ancien visuel appli.jpg", alt: "Visuel de l'application" }
             ]
         },
         2: {
@@ -77,11 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: "README", filename: "readme jojo.md" },
                 { name: "Charte graphique", filename: "charte graphique Finale (1).pdf" },
                 { name: "Cahier des charges", filename: "Cahier des Charges (1).pdf" },
-                { name: "Diagrammes", filename: "diagramme jojo.png" }
+                { name: "Diagrammes", filename: "diagramme jojo.png" },
+                { name: "Code du projet", filename: "screen code jojo.png" }
             ],
             gallery: [
-                { filename: "aperçu jojo.png", alt: "Aperçu du site" },
-                { filename: "screen code jojo.png", alt: "Code du projet" }
+                { filename: "aperçu jojo.png", alt: "Aperçu du site" }
             ]
         },
         3: {
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Travailler en mode projet",
             ],
             documents: [
-                { name: "Cahier des charges", filename: "Cahier_Maquette_Espace_Utilisateur.docx" },
+                { name: "Cahier des charges", filename: "cdc_section_utilisateur (1).pdf" },
                 { name: "Planning", filename: "planing section u.jpg" },
                 { name: "Message de lancement", filename: "message lancement section utilisateur.pdf" }
             ],
@@ -223,13 +223,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Fonction mise à jour pour pointer vers le dossier document à la racine
+    // Fonction pour obtenir le chemin correct vers les documents
     function getDocumentPath(projectData, filename) {
-        // Renvoie le chemin vers le fichier dans le dossier document à la racine
         return "document/" + filename;
     }
 
-    // Garde la même structure pour les images (à adapter si nécessaire)
+    // Fonction pour obtenir le chemin correct vers les images
     function getImagePath(projectData, filename) {
         return "document/" + filename;
     }
