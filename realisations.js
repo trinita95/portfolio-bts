@@ -37,13 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalGallery = document.getElementById('modalGallery');
     const closeModal = document.querySelector('.close-modal');
 
-    // Base de données des projets avec chemins vers les dossiers dédiés
+    // Base de données des projets avec correspondance des documents
     const projectsData = {
         1: {
             title: "Gest EPI",
             type: "school",
             tag: "Projet Scolaire",
-            description: "Application de gestion des Équipements de Protection Individuelle (EPI) . Le système permet de suivre l'attribution, les retours et les dates de péremption des équipements.",
+            description: "Application de gestion des Équipements de Protection Individuelle (EPI). Le système permet de suivre l'attribution, les retours et les dates de péremption des équipements.",
             tech: "React, Node JS",
             duration: "3 mois",
             folderPath: "projets/gest-epi/",
@@ -51,44 +51,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Développement d'une API centralisée pour la gestion des équipements de protection individuelle (EPI) et le suivi des contrôles de sécurité.",
                 "Fonctionnalités complètes de gestion des EPI : création, modification et suivi des équipements (cordes, casques, longes, baudriers, etc.).",
                 "Intégration d'un module de contrôle : enregistrement des vérifications effectuées, gestion des statuts de conformité des EPI (conforme, à réparer, hors service).",
-                
             ],
             documents: [
-                { name: "Contexte", filename: "contexte.pdf" },
-                { name: "Cahier des charges", filename: "cahier_des_charges.pdf" },
-                { name: "Modèle de base de données", filename: "modele_bdd.pdf" },
-                { name: "Captures d'écran du code", filename: "captures_code.pdf" },
-                { name: "Aperçu du projet", filename: "apercu_projet.pdf" }
+                { name: "Contexte et cahier des charges", filename: "Cahier des Charges (1).pdf" },
+                { name: "Modèle relationnel", filename: "modele realitionnel.md" }
             ],
-            
-            
+            gallery: [
+                { filename: "ancien_visuel_appli.jpg", alt: "Visuel de l'application" }
+            ]
         },
         2: {
             title: "Jojo Legion",
             type: "school",
             tag: "Projet Scolaire",
-            description: "Projet web réalisé autour de l’univers de JoJo’s Bizarre Adventure, pensé par les fans, pour les fans. Ce site propose des contenus variés : présentations des personnages, galeries, théories, etc.",
+            description: "Projet web réalisé autour de l'univers de JoJo's Bizarre Adventure, pensé par les fans, pour les fans. Ce site propose des contenus variés : présentations des personnages, galeries, théories, etc.",
             tech: "Django",
             duration: "4 mois",
             folderPath: "projets/jojo-legion/",
             competences: [
-                "Consultation de tout les personnages disponibles et des théories",
-                "gestion differente des utilisateurs connectés et non connectés",
+                "Consultation de tous les personnages disponibles et des théories",
+                "Gestion différente des utilisateurs connectés et non connectés",
                 "Classement des personnages et des théories",
-                
             ],
             documents: [
-                { name: "README", filename: "README.md" },
-                { name: "Charte graphique", filename: "charte graphique Final.pdf" },
-                { name: "Cahier des charges", filename: "Cahier des charges (1).pdf" },
-                { name: "Diagrammes", filename: "diagrammes.pdf" },
-                { name: "Planning", filename: "planning.pdf" },
-                { name: "Extrait de code", filename: "extrait_code.pdf" },
-                { name: "Aperçu du projet", filename: "apercu_projet.pdf" }
+                { name: "README", filename: "readme jojo.md" },
+                { name: "Charte graphique", filename: "charte graphique Finale (1).pdf" },
+                { name: "Cahier des charges", filename: "Cahier des Charges (1).pdf" },
+                { name: "Diagrammes", filename: "diagramme jojo.png" }
             ],
             gallery: [
-                { filename: "screen terminal", alt: "Menu principal" },
-                
+                { filename: "aperçu jojo.png", alt: "Aperçu du site" },
+                { filename: "screen code jojo.png", alt: "Code du projet" }
             ]
         },
         3: {
@@ -105,14 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Conception et implémentation d'une base de données",
             ],
             documents: [
-                { name: "Extrait de code", filename: "extrait_code_sdv.pdf" },
-                { name: "Extrait de base de données", filename: "extrait_de_BDD.pdf" },
-                { name: "Aperçu du projet", filename: "apercu_projet.pdf" }
+                { name: "Extrait de code", filename: "code sdv.png" },
+                { name: "Extrait de base de données", filename: "bdd sdv.png" }
             ],
-            gallery: [
-                { filename: "accueil.jpg", alt: "Page d'accueil" },
-                { filename: "panier.jpg", alt: "Panier" },
-            ]
+            gallery: []
         },
         4: {
             title: "Text Adventure",
@@ -129,18 +118,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Test et débogage d'applications"
             ],
             documents: [
-                { name: "Contexte", filename: "contexte.pdf" },
-                { name: "Cahier des charges", filename: "cahier_des_charges.pdf" },
-                { name: "Captures d'écran du code", filename: "captures_code.pdf" },
-                { name: "Aperçu du projet", filename: "apercu_projet.pdf" }
+                { name: "README", filename: "readme text adventure.md" },
+                { name: "Code du projet", filename: "text adventure code.png" }
             ],
             gallery: [
-                { filename: "intro.jpg", alt: "Introduction du jeu" },
-                { filename: "choix.jpg", alt: "Exemple de choix" }
+                { filename: "text adventure terminal.png", alt: "Terminal du jeu" }
             ]
         },
         5: {
-            title: "Optimisation du logiciel interne de l'entreprise ",
+            title: "Optimisation du logiciel interne de l'entreprise",
             type: "pro",
             tag: "Projet Professionnel",
             description: "Optimisation des performances et de l'ergonomie d'un logiciel interne pour améliorer l'efficacité des utilisateurs.",
@@ -153,20 +139,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Organiser son développement professionnel",
                 "Optimisation des performances pour le chargement des documents"
             ],
-            documents: [
-                
-            ],
-            gallery: [
-                { filename: "1", alt: "1" },
-                { filename: "2", alt: "2" },
-                { filename: "3", alt: "3" }
-            ]
+            documents: [],
+            gallery: []
         },
         6: {
             title: "Mission de sondage",
             type: "pro",
             tag: "Projet Professionnel",
-            description: ">Développement d'une interface de sondage dans le cadre du développement des outils de l'entreprise.",
+            description: "Développement d'une interface de sondage dans le cadre du développement des outils de l'entreprise.",
             tech: "HTML, CSS, JavaScript",
             duration: "3 mois",
             folderPath: "projets/plateforme-sondage/",
@@ -175,13 +155,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Mettre à disposition des utilisateurs un service informatique",
             ],
             documents: [
-                { name: "Cahier des charges", filename: "cdc_sondages (3).pdf" },
-                { name: "Planning", filename: "planning sondage.png" }
+                { name: "Cahier des charges", filename: "Cahier_Maquette_Sondages.docx" },
+                { name: "Planning", filename: "planning sondage.jpg" },
+                { name: "Message de lancement", filename: "message lancement sondage.pdf" }
             ],
             gallery: [
-                { filename: "1", alt: "documents/cdc_sondages" },
-                { filename: "2", alt: "aperçu" },
-                { filename: "3", alt: "message de lancement" },
+                { filename: "aperçu sondage1.png", alt: "Aperçu sondage 1" },
+                { filename: "aperçu sondage 2.png", alt: "Aperçu sondage 2" }
             ]
         },
         7: {
@@ -198,15 +178,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Travailler en mode projet",
             ],
             documents: [
-                { name: "Cahier des charges", filename: "cdc_ref.pdf" },
-                { name: "Charte graphique de l'entreprise", filename: "chartegraphique flex-flux.pdf" },
-                { name: "Planning", filename: "planning ref.png" }
+                { name: "Cahier des charges", filename: "Cahier_Maquette_Refonte.docx" },
+                { name: "Charte graphique", filename: "charte graphique flex-flux.pdf" },
+                { name: "Planning", filename: "planning refonte.jpg" }
             ],
-            gallery: [
-                { filename: "1", alt: "1" },
-                { filename: "2", alt: "2" },
-                { filename: "3", alt: "3" }
-            ]
+            gallery: []
         },
         8: {
             title: "Section utilisateur Application mobile",
@@ -220,16 +196,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Gérer le patrimoine informatique",
                 "Répondre aux incidents et aux demandes d'assistance et d'évolution",
                 "Travailler en mode projet",
-
             ],
             documents: [
-                { name: "Cahier des charges", filename: "cdc_section_utilisateur (1).pdf" },
-                { name: "Planning", filename: "planning section u.png" }
+                { name: "Cahier des charges", filename: "Cahier_Maquette_Espace_Utilisateur.docx" },
+                { name: "Planning", filename: "planing section u.jpg" },
+                { name: "Message de lancement", filename: "message lancement section utilisateur.pdf" }
             ],
             gallery: [
-                { filename: "screen 1", alt: "1n" },
-                { filename: "2", alt: "2" },
-            
+                { filename: "aperçu section u.png", alt: "Aperçu de la section utilisateur" }
             ]
         },
         9: {
@@ -243,26 +217,21 @@ document.addEventListener('DOMContentLoaded', () => {
             competences: [
                 "Gérer le patrimoine informatique",
                 "Organiser son développement professionnel",
-            
             ],
-            documents: [
-                
-            ],
-            gallery: [
-                { filename: "extrait de registre", alt: "extrait de registre" },
-               
-            ]
+            documents: [],
+            gallery: []
         }
     };
 
-    // Fonction pour construire les chemins complets des fichiers
-    // Modifiée pour inclure le sous-dossier "document"
+    // Fonction mise à jour pour pointer vers le dossier document à la racine
     function getDocumentPath(projectData, filename) {
-        return projectData.folderPath + "document/" + filename;
+        // Renvoie le chemin vers le fichier dans le dossier document à la racine
+        return "document/" + filename;
     }
 
+    // Garde la même structure pour les images (à adapter si nécessaire)
     function getImagePath(projectData, filename) {
-        return projectData.folderPath + "images/" + filename;
+        return "document/" + filename;
     }
 
     // Ouvrir le modal lors du clic sur le bouton "Voir les détails"
@@ -298,6 +267,25 @@ document.addEventListener('DOMContentLoaded', () => {
                         a.href = getDocumentPath(projectData, doc.filename);
                         a.textContent = doc.name;
                         a.target = "_blank";
+                        
+                        // Ajouter une icône en fonction du type de fichier
+                        const extension = doc.filename.split('.').pop().toLowerCase();
+                        const icon = document.createElement('i');
+                        
+                        if (extension === 'pdf') {
+                            icon.className = 'fas fa-file-pdf';
+                        } else if (['doc', 'docx'].includes(extension)) {
+                            icon.className = 'fas fa-file-word';
+                        } else if (['png', 'jpg', 'jpeg', 'gif'].includes(extension)) {
+                            icon.className = 'fas fa-file-image';
+                        } else if (['md'].includes(extension)) {
+                            icon.className = 'fas fa-file-alt';
+                        } else {
+                            icon.className = 'fas fa-file';
+                        }
+                        
+                        li.appendChild(icon);
+                        li.appendChild(document.createTextNode(' '));
                         li.appendChild(a);
                         modalDocuments.appendChild(li);
                     });
@@ -381,5 +369,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.overflow = 'auto';
             }, 300);
         }
+    });
+
+    // Gestion des erreurs d'images
+    document.querySelectorAll('img').forEach(img => {
+        img.onerror = function() {
+            this.src = 'images/placeholder.png'; // Image de remplacement en cas d'erreur
+            this.alt = 'Image non disponible';
+        };
     });
 });
