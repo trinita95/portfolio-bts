@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             gallery: [
                 { filename: "ancien visuel appli.jpg", alt: "ancien visuel" },
-                { filename: "nouveau visu refonte", alt: "nouveau visuel" }
+                { filename: "nouveau visu refonte.png", alt: "nouveau visuel" }
             ]
         },
         8: {
