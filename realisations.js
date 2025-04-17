@@ -140,7 +140,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Optimisation des performances pour le chargement des documents"
             ],
             documents: [],
-            gallery: []
+            gallery: [
+                { filename: "update flex (1).png", alt: "Aperçu sondage 1" },
+                { filename: "update flex (2).png", alt: "Aperçu sondage 2" },
+                { filename: "update flex (3).png", alt: "Aperçu sondage 2" }
+            ]
         },
         6: {
             title: "Mission de sondage",
