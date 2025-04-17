@@ -53,11 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Intégration d'un module de contrôle : enregistrement des vérifications effectuées, gestion des statuts de conformité des EPI (conforme, à réparer, hors service).",
             ],
             documents: [
-                { name: "Cahier des charges", filename: "Cahier des Charges (1).pdf" },
-                { name: "Modèle relationnel", filename: "modele realitionnel.md" }
+                { name: "Contexte", filename: "contexte Gest EPI.md" },
+                
             ],
             gallery: [
-                { filename: "ancien visuel appli.jpg", alt: "Visuel de l'application" }
+                { filename: "bdd gest epi.png", alt: "bdd" },
+                { filename: "creation utilisateur gest epi.png", alt: "creation utilisateur" },
+               
             ]
         },
         2: {
