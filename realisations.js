@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             gallery: [
                 { filename: "bdd gest epi.png", alt: "bdd" },
                 { filename: "creation utilisateur gest epi.png", alt: "creation utilisateur" },
-               
+                { filename: "aperçu gest epi.jpg", alt: "aperçu" }
             ]
         },
         2: {
